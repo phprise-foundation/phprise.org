@@ -11,26 +11,38 @@ interface Props {
     kind: string;
     url: string | null;
     stars: number | null;
+    deprecated?: boolean;
+    replacedBy?: string | null;
   };
 }
 
 const { project } = Astro.props;
+const replacement = project.replacedBy
+  ? `/projects/${project.replacedBy.split('/').pop()}`
+  : null;
 ---
 
 <article
-  class="card"
+  class:list={['card', { 'card--deprecated': project.deprecated }]}
   data-taxonomy={project.taxonomy}
   data-search={`${project.title} ${project.summary} ${project.package ?? ''}`.toLowerCase()}
 >
   <header class="card__head">
     <h3 class="card__title"><a href={`/projects/${project.slug}`}>{project.title}</a></h3>
-    <TaxonomyBadge taxonomy={project.taxonomy} />
+    <span class="card__badges">
+      {project.deprecated && <span class="badge badge--deprecated">Deprecated</span>}
+      <TaxonomyBadge taxonomy={project.taxonomy} />
+    </span>
   </header>
 
   <p class="card__body">{project.summary}</p>
 
   <footer class="card__foot">
-    {project.package && <span class="card__pkg">{project.package}</span>}
+    {project.deprecated && replacement ? (
+      <span>Replaced by <a href={replacement}>{project.replacedBy}</a></span>
+    ) : (
+      project.package && <span class="card__pkg">{project.package}</span>
+    )}
     {project.stars !== null && project.stars > 0 && (
       <span aria-label={`${project.stars} stars on GitHub`}>★ {project.stars}</span>
     )}

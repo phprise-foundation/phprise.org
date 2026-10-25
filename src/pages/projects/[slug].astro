@@ -16,6 +16,9 @@ interface Project {
   stars: number | null;
   language: string | null;
   pushedAt: string | null;
+  deprecated?: boolean;
+  replacedBy?: string | null;
+  deprecationNote?: string | null;
 }
 
 const projects = data as Project[];
@@ -58,6 +61,10 @@ const shape = shapeLabel[project.taxonomy];
 const kind = kindLabel[project.kind];
 const classification = shape === kind ? shape : `${shape} · ${kind}`;
 
+const replacementSlug = project.replacedBy
+  ? project.replacedBy.split('/').pop()
+  : null;
+
 const lastCommit = project.pushedAt
   ? new Date(project.pushedAt).toLocaleDateString('en', {
       year: 'numeric',
@@ -72,6 +79,19 @@ const lastCommit = project.pushedAt
     <div class="wrap">
       <p class="breadcrumb"><a href="/projects">Projects</a> / {project.title}</p>
 
+      {project.deprecated && (
+        <aside class="notice notice--deprecated">
+          <p>
+            <strong>Deprecated.</strong> This repository is no longer maintained and will be archived.{' '}
+            {replacementSlug ? (
+              <>Use <a href={`/projects/${replacementSlug}`}>{project.replacedBy}</a> instead.</>
+            ) : (
+              project.deprecationNote ?? ''
+            )}
+          </p>
+        </aside>
+      )}
+
       <header class="detail__header">
         <p class="eyebrow">{classification}</p>
         <h1 class="detail__title">{project.title}</h1>
@@ -85,7 +105,7 @@ const lastCommit = project.pushedAt
         </div>
 
         <div class="detail__install">
-          <pre><code>{installCommand}</code></pre>
+          {!project.deprecated && <pre><code>{installCommand}</code></pre>}
         </div>
       </header>
 

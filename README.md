@@ -35,6 +35,19 @@ src/
 └── styles/main.css           tokens + layout, no framework
 ```
 
+### Deprecating a project
+
+`curated.json` accepts two optional fields:
+
+```json
+{ "deprecated": true, "replacedBy": "phprise/sdk-stone-psp" }
+{ "deprecated": true, "replacedBy": null, "deprecationNote": "Superseded by ..." }
+```
+
+The card gets a `Deprecated` badge, the install snippet is hidden, and the detail
+page shows a notice pointing at the replacement. The canonical declaration lives in
+each repository's `composer.json` (`"abandoned"`), not here — the site only mirrors it.
+
 ## Commands
 
 | Command | What it does |

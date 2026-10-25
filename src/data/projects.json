@@ -206,7 +206,7 @@
     "url": "https://github.com/phprise-foundation/ensemble",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-10-25T13:48:35Z",
+    "pushedAt": "2026-10-25T16:05:14Z",
     "archived": false
   },
   {
@@ -273,10 +273,12 @@
     "taxonomy": "assembly",
     "kind": "sdk",
     "featured": false,
+    "deprecated": true,
+    "replacedBy": "phprise/sdk-stone-psp",
     "url": "https://github.com/phprise-foundation/stone-sdk",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-03-08T00:40:43Z",
+    "pushedAt": "2026-10-25T16:22:47Z",
     "archived": false
   },
   {
@@ -329,10 +331,13 @@
     "taxonomy": "template",
     "kind": "template",
     "featured": false,
+    "deprecated": true,
+    "replacedBy": null,
+    "deprecationNote": "Superseded by the three OTAKU templates: otaku-atomic, otaku-assembly and otaku-application.",
     "url": "https://github.com/phprise-foundation/template",
     "stars": 0,
     "language": null,
-    "pushedAt": "2026-01-08T19:00:49Z",
+    "pushedAt": "2026-10-25T16:21:43Z",
     "archived": false
   }
 ]

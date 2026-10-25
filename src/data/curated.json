@@ -177,7 +177,9 @@
     "summary": "PHP SDK for Stone: typed, testable and free of hidden globals.",
     "taxonomy": "assembly",
     "kind": "sdk",
-    "featured": false
+    "featured": false,
+    "deprecated": true,
+    "replacedBy": "phprise/sdk-stone-psp"
   },
   {
     "slug": "otaku-atomic",
@@ -213,6 +215,9 @@
     "summary": "The base skeleton every PHPRise repository starts from.",
     "taxonomy": "template",
     "kind": "template",
-    "featured": false
+    "featured": false,
+    "deprecated": true,
+    "replacedBy": null,
+    "deprecationNote": "Superseded by the three OTAKU templates: otaku-atomic, otaku-assembly and otaku-application."
   }
 ]
