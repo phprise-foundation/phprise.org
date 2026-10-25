@@ -14,7 +14,7 @@
     "url": "https://github.com/phprise-foundation/common-cast",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-05-31T22:17:03Z",
+    "pushedAt": "2026-10-25T20:31:13Z",
     "archived": false,
     "topics": [
       "php",
@@ -36,7 +36,7 @@
     "url": "https://github.com/phprise-foundation/common-contract",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-06-01T19:50:10Z",
+    "pushedAt": "2026-10-25T20:31:16Z",
     "archived": false,
     "topics": [
       "php",
@@ -58,7 +58,7 @@
     "url": "https://github.com/phprise-foundation/common-trait",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-05-31T20:25:48Z",
+    "pushedAt": "2026-10-25T20:31:18Z",
     "archived": false,
     "topics": [
       "php",
@@ -79,8 +79,8 @@
     "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/common-value-object",
     "stars": 0,
-    "language": null,
-    "pushedAt": "2026-01-06T23:28:43Z",
+    "language": "PHP",
+    "pushedAt": "2026-10-25T20:31:22Z",
     "archived": false,
     "topics": [
       "php",
@@ -102,7 +102,7 @@
     "url": "https://github.com/phprise-foundation/dto-contract",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-06-01T21:36:33Z",
+    "pushedAt": "2026-10-25T20:32:05Z",
     "archived": false,
     "topics": [
       "php",
@@ -124,7 +124,7 @@
     "url": "https://github.com/phprise-foundation/dto-trait",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-06-01T21:46:29Z",
+    "pushedAt": "2026-10-25T20:31:25Z",
     "archived": false,
     "topics": [
       "php",
@@ -146,7 +146,7 @@
     "url": "https://github.com/phprise-foundation/http-client",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-01-22T19:42:07Z",
+    "pushedAt": "2026-10-25T20:31:33Z",
     "archived": false,
     "topics": [
       "php",
@@ -168,7 +168,7 @@
     "url": "https://github.com/phprise-foundation/http-connector",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-01-22T20:05:29Z",
+    "pushedAt": "2026-10-25T20:31:36Z",
     "archived": false,
     "topics": [
       "php",
@@ -190,7 +190,7 @@
     "url": "https://github.com/phprise-foundation/http-contract",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-01-10T01:56:01Z",
+    "pushedAt": "2026-10-25T20:31:39Z",
     "archived": false,
     "topics": [
       "php",
@@ -212,7 +212,7 @@
     "url": "https://github.com/phprise-foundation/http-request",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-01-22T19:18:56Z",
+    "pushedAt": "2026-10-25T20:31:42Z",
     "archived": false,
     "topics": [
       "php",
@@ -234,7 +234,7 @@
     "url": "https://github.com/phprise-foundation/http-value-object",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-01-22T16:22:29Z",
+    "pushedAt": "2026-10-25T20:31:45Z",
     "archived": false,
     "topics": [
       "php",
@@ -256,7 +256,7 @@
     "url": "https://github.com/phprise-foundation/common",
     "stars": 0,
     "language": null,
-    "pushedAt": "2026-01-09T03:36:20Z",
+    "pushedAt": "2026-10-25T20:31:10Z",
     "archived": false,
     "topics": [
       "php",
@@ -299,8 +299,8 @@
     "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/http",
     "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-01-23T15:29:28Z",
+    "language": null,
+    "pushedAt": "2026-10-25T20:31:31Z",
     "archived": false,
     "topics": [
       "php",
@@ -388,7 +388,7 @@
     "url": "https://github.com/phprise-foundation/ensemble",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-10-25T16:05:14Z",
+    "pushedAt": "2026-10-25T20:31:27Z",
     "archived": false,
     "topics": [
       "php",
@@ -410,7 +410,7 @@
     "url": "https://github.com/phprise-foundation/grogu-gateway",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-09-11T15:11:16Z",
+    "pushedAt": "2026-10-25T20:32:08Z",
     "archived": false,
     "topics": [
       "php",
@@ -453,8 +453,8 @@
     "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/otaku-application",
     "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-10-11T23:25:22Z",
+    "language": "Shell",
+    "pushedAt": "2026-10-25T20:31:47Z",
     "archived": false,
     "topics": [
       "php",
@@ -475,8 +475,8 @@
     "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/otaku-assembly",
     "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-10-11T23:25:30Z",
+    "language": "Shell",
+    "pushedAt": "2026-10-25T20:31:50Z",
     "archived": false,
     "topics": [
       "php",
@@ -497,8 +497,8 @@
     "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/otaku-atomic",
     "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-10-11T23:25:26Z",
+    "language": "Shell",
+    "pushedAt": "2026-10-25T20:31:52Z",
     "archived": false,
     "topics": [
       "php",
@@ -520,7 +520,7 @@
     "url": "https://github.com/phprise-foundation/template",
     "stars": 0,
     "language": null,
-    "pushedAt": "2026-10-25T16:21:43Z",
+    "pushedAt": "2026-10-25T20:31:55Z",
     "archived": false,
     "topics": [
       "php",

@@ -833,3 +833,15 @@ hr {
 .nowrap {
   white-space: nowrap;
 }
+
+.callout {
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--accent);
+  background: var(--paper-2);
+  padding: 0.9rem 1.1rem;
+  border-radius: 3px;
+  margin: 1.5rem 0 0;
+  max-width: var(--measure);
+}
+
+.callout p { margin: 0; font-size: 0.9rem; color: var(--ink-2); }
