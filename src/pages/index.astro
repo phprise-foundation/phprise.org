@@ -1,0 +1,114 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projects from '../data/projects.json';
+
+const featured = projects.filter((project) => project.featured);
+const total = projects.length;
+const counts = projects.reduce<Record<string, number>>((acc, project) => {
+  acc[project.taxonomy] = (acc[project.taxonomy] ?? 0) + 1;
+  return acc;
+}, {});
+---
+
+<Base
+  title="PHPRise — Compose PHP like Unix"
+  description="Open source PHP built from small, replaceable parts. Atoms, assemblies and applications under one manifesto."
+  path="/"
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Open source · PHP 8.4 · MIT</p>
+      <h1 class="hero__title">PHPRise<span class="dot">.</span></h1>
+      <p class="hero__tagline">Compose PHP like Unix.</p>
+
+      <p class="lede">
+        An open source foundation for PHP built out of small, replaceable parts.
+        Every package does one thing, declares its contract, and can be swapped
+        without touching the rest. No framework owns your domain.
+      </p>
+
+      <div class="hero__actions">
+        <a class="button" href="/projects">Browse {total} repositories</a>
+        <a class="button button--ghost" href="/manifesto">Read the manifesto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Three shapes, no exceptions</p>
+      <h2>Every repository is one of three things</h2>
+      <p class="lede">
+        The taxonomy is enforced at the source, not reviewed after the fact.
+        If a repository cannot be classified, it is not ready to exist.
+      </p>
+
+      <div class="grid grid--3 mt-2">
+        <article class="card">
+          <h3>Atoms</h3>
+          <p class="card__body">
+            The smallest unit that still makes sense. One responsibility, one level
+            of directory, one contract. <code>http-request</code> is an atom.
+          </p>
+          <p class="card__meta">{counts.atom ?? 0} repositories</p>
+        </article>
+
+        <article class="card">
+          <h3>Assemblies</h3>
+          <p class="card__body">
+            Composition without logic. An assembly exists to install many atoms at once
+            through <code>composer require</code>. <code>http</code> is an assembly.
+          </p>
+          <p class="card__meta">{counts.assembly ?? 0} repositories</p>
+        </article>
+
+        <article class="card">
+          <h3>Applications</h3>
+          <p class="card__body">
+            The living system: entities, use cases and adapters kept lean, with every
+            generic tool pushed down into atoms.
+          </p>
+          <p class="card__meta">{counts.application ?? 0} repositories</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">Featured</p>
+      <h2>Where to start reading</h2>
+
+      <div class="grid grid--cards mt-2">
+        {featured.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <blockquote class="quote">
+        Write code that never needs “fixing” because it was built under absolute
+        constraint.
+        <cite class="quote__source">The OTAKU Manifesto — Own your Discipline</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">All of it, always</p>
+      <h2>Everything here is open source</h2>
+      <p class="lede">
+        MIT licensed, developed in public, and structured so that the smallest useful
+        piece can be adopted alone. Read the <a href="/contribute">contribution
+        guide</a> if you want to build with us.
+      </p>
+      <div class="hero__actions">
+        <a class="button" href="https://github.com/phprise-foundation" rel="noopener">GitHub organization ↗</a>
+        <a class="button button--ghost" href="/projects">See every repository</a>
+      </div>
+    </div>
+  </section>
+</Base>

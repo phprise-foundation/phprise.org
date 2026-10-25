@@ -1,0 +1,149 @@
+---
+import Base from '../../layouts/Base.astro';
+import TaxonomyBadge from '../../components/TaxonomyBadge.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import data from '../../data/projects.json';
+
+interface Project {
+  slug: string;
+  package: string | null;
+  title: string;
+  summary: string;
+  taxonomy: string;
+  kind: string;
+  featured: boolean;
+  url: string | null;
+  stars: number | null;
+  language: string | null;
+  pushedAt: string | null;
+}
+
+const projects = data as Project[];
+
+export function getStaticPaths() {
+  const all = data as Project[];
+
+  return all.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props as { project: Project };
+
+const related = projects
+  .filter((other) => other.taxonomy === project.taxonomy && other.slug !== project.slug)
+  .slice(0, 3);
+
+const shapeLabel: Record<string, string> = {
+  atom: 'Atom',
+  assembly: 'Assembly',
+  application: 'Application',
+  template: 'Template',
+};
+
+const kindLabel: Record<string, string> = {
+  library: 'Library',
+  sdk: 'SDK',
+  app: 'Application',
+  template: 'Template',
+};
+
+const isInstallable = project.kind === 'library' || project.kind === 'sdk';
+const installCommand = isInstallable
+  ? `composer require ${project.package}`
+  : `git clone ${project.url}.git`;
+
+const shape = shapeLabel[project.taxonomy];
+const kind = kindLabel[project.kind];
+const classification = shape === kind ? shape : `${shape} · ${kind}`;
+
+const lastCommit = project.pushedAt
+  ? new Date(project.pushedAt).toLocaleDateString('en', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    })
+  : '—';
+---
+
+<Base title={project.title} description={project.summary} path={`/projects/${project.slug}/`}>
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="/projects">Projects</a> / {project.title}</p>
+
+      <header class="detail__header">
+        <p class="eyebrow">{classification}</p>
+        <h1 class="detail__title">{project.title}</h1>
+        <p class="lede">{project.summary}</p>
+
+        <div class="hero__actions">
+          {project.url && (
+            <a class="button" href={project.url} rel="noopener">View on GitHub ↗</a>
+          )}
+          <a class="button button--ghost" href="/projects">All projects</a>
+        </div>
+
+        <div class="detail__install">
+          <pre><code>{installCommand}</code></pre>
+        </div>
+      </header>
+
+      <div class="prose">
+        <h2>What it is</h2>
+        <p>
+          {project.title} is {project.taxonomy === 'atom'
+            ? 'an atomic repository: the smallest unit that still fulfils a complete contract. It has no subdirectories and no dependencies beyond the contracts it implements.'
+            : project.taxonomy === 'assembly'
+              ? 'an assembly repository: it contains no logic and exists to compose atoms into a single installable unit.'
+              : project.taxonomy === 'application'
+                ? 'an application repository: a living system built on Clean Architecture, where the domain stays isolated from frameworks and infrastructure.'
+                : 'a template repository: the starting skeleton for new PHPRise projects, already shaped according to the manifesto.'}
+          {' '}Its full documentation, tests and contribution rules live in the repository.
+        </p>
+
+        <h2>Contract</h2>
+        <p>
+          Every PHPRise package follows the same promise: small surface, explicit
+          dependencies, no hidden globals, and a contract you can replace. Read the
+          <a href="/manifesto"> manifesto</a> for the rules this repository obeys.
+        </p>
+      </div>
+
+      <dl class="facts">
+        <div>
+          <dt>Shape</dt>
+          <dd>{shapeLabel[project.taxonomy]}</dd>
+        </div>
+        <div>
+          <dt>Kind</dt>
+          <dd>{kindLabel[project.kind]}</dd>
+        </div>
+        <div>
+          <dt>Language</dt>
+          <dd>{project.language ?? '—'}</dd>
+        </div>
+        <div>
+          <dt>Last commit</dt>
+          <dd>{lastCommit}</dd>
+        </div>
+        <div>
+          <dt>Stars</dt>
+          <dd>{project.stars ?? '—'}</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section section--tight">
+      <div class="wrap">
+        <p class="eyebrow">Same shape</p>
+        <h2>Other {shapeLabel[project.taxonomy].toLowerCase()}s</h2>
+        <div class="grid grid--cards mt-2">
+          {related.map((other) => <ProjectCard project={other} />)}
+        </div>
+      </div>
+    </section>
+  )}
+</Base>

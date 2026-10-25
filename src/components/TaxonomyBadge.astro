@@ -1,0 +1,17 @@
+---
+interface Props {
+  taxonomy: string;
+  kind?: string;
+}
+
+const { taxonomy } = Astro.props;
+
+const labels: Record<string, string> = {
+  atom: 'Atom',
+  assembly: 'Assembly',
+  application: 'Application',
+  template: 'Template',
+};
+---
+
+<span class={`badge badge--${taxonomy}`}>{labels[taxonomy] ?? taxonomy}</span>

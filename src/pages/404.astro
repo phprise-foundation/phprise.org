@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Not found" description="This page does not exist." path="/404">
+  <section class="not-found">
+    <div class="wrap">
+      <p class="not-found__code">404</p>
+      <h1>No such page</h1>
+      <p class="lede">
+        The URL exists in the request but not in the build. That is the advantage of
+        static files: you get a real 404 instead of an empty shell.
+      </p>
+      <div class="hero__actions">
+        <a class="button" href="/">Back home</a>
+        <a class="button button--ghost" href="/projects">Browse projects</a>
+      </div>
+    </div>
+  </section>
+</Base>

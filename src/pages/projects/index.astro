@@ -1,0 +1,114 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import projects from '../../data/projects.json';
+
+const total = projects.length;
+const taxonomyOrder = ['atom', 'assembly', 'application', 'template'];
+const sorted = [...projects].sort(
+  (a, b) => taxonomyOrder.indexOf(a.taxonomy) - taxonomyOrder.indexOf(b.taxonomy),
+);
+---
+
+<Base
+  title="Projects"
+  description="Every PHPRise repository, classified as atom, assembly, application or template."
+  path="/projects"
+>
+  <section class="section section--tight">
+    <div class="wrap">
+      <p class="eyebrow">Repositories</p>
+      <h1>Projects</h1>
+      <p class="lede">
+        {total} open source repositories. Each one is exactly one shape: an atom, an
+        assembly, an application or a template.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="Filter projects">
+        <p class="filters__label" id="filter-label">Filter by shape</p>
+        <div class="filters__group" aria-labelledby="filter-label">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="atom" aria-pressed="false">Atoms</button>
+          <button class="chip" type="button" data-filter="assembly" aria-pressed="false">Assemblies</button>
+          <button class="chip" type="button" data-filter="application" aria-pressed="false">Applications</button>
+          <button class="chip" type="button" data-filter="template" aria-pressed="false">Templates</button>
+        </div>
+
+        <div class="filters__search">
+          <label class="filters__label" for="project-search">Search</label>
+          <input
+            id="project-search"
+            type="search"
+            placeholder="Name, package or description"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <p class="result-count" aria-live="polite" data-result-count>
+        {total} repositories
+      </p>
+
+      <div class="grid grid--cards" data-project-grid>
+        {sorted.map((project) => <ProjectCard project={project} />)}
+      </div>
+
+      <p class="empty" data-empty hidden>No repository matches this filter.</p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const grid = document.querySelector('[data-project-grid]');
+  const cards = grid ? Array.from(grid.querySelectorAll('.card')) : [];
+  const chips = Array.from(document.querySelectorAll('[data-filter]'));
+  const search = document.querySelector('#project-search');
+  const counter = document.querySelector('[data-result-count]');
+  const empty = document.querySelector('[data-empty]');
+
+  let activeShape = 'all';
+  let query = '';
+
+  function apply() {
+    let visible = 0;
+
+    for (const card of cards) {
+      const shape = card.getAttribute('data-taxonomy');
+      const text = card.getAttribute('data-search') ?? '';
+      const matchesShape = activeShape === 'all' || shape === activeShape;
+      const matchesQuery = query === '' || text.includes(query);
+
+      const show = matchesShape && matchesQuery;
+      card.hidden = !show;
+      if (show) visible += 1;
+    }
+
+    if (counter) {
+      const noun = visible === 1 ? 'repository' : 'repositories';
+      counter.textContent = `${visible} ${noun}`;
+    }
+
+    if (empty) empty.hidden = visible !== 0;
+  }
+
+  for (const chip of chips) {
+    chip.addEventListener('click', () => {
+      activeShape = chip.getAttribute('data-filter') ?? 'all';
+
+      for (const other of chips) {
+        other.setAttribute('aria-pressed', String(other === chip));
+      }
+
+      apply();
+    });
+  }
+
+  search?.addEventListener('input', () => {
+    query = search.value.trim().toLowerCase();
+    apply();
+  });
+</script>

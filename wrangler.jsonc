@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "phprise-org",
+  "compatibility_date": "2026-10-25",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "phprise.org", "custom_domain": true },
+    { "pattern": "www.phprise.org", "custom_domain": true }
+  ]
+}

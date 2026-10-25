@@ -1,0 +1,148 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="The OTAKU Manifesto"
+  description="Fluid Structure Design: five pillars and three repository shapes that govern every PHPRise project."
+  path="/manifesto"
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">The OTAKU Manifesto</p>
+      <h1>Fluid Structure Design</h1>
+      <p class="lede">
+        OTAKU reflects a technical obsession with mastery, discipline and structural
+        purity. It is not a style guide — it is the set of constraints that decides
+        whether a piece of code is allowed to exist.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap grid grid--3">
+      <article class="pillar">
+        <span class="pillar__letter">O</span>
+        <h3>Own your Discipline</h3>
+        <p class="card__body">
+          Quality is not an accident, it is the result of intentional restriction.
+          The nine rules of Object Calisthenics are mandatory: one level of
+          indentation per method, no <code>else</code>, wrap every primitive, first
+          class collections, one dot per line, no abbreviations, small entities, at
+          most two instance variables, no getters or setters.
+        </p>
+        <p class="pillar__rule">
+          Write code that never needs “fixing” because it was built under absolute
+          constraint.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <span class="pillar__letter">T</span>
+        <h3>Tools for Composition</h3>
+        <p class="card__body">
+          Like Unix tools, each component does one thing well. Architecture is a set
+          of small, replaceable parts connected by clear inputs and outputs. The
+          application flow is a data pipe: input enters through adapters, traverses
+          the core, and exits.
+        </p>
+        <p class="pillar__rule">
+          Treat your application flow as a data pipe, keeping logic isolated from side
+          effects.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <span class="pillar__letter">A</span>
+        <h3>Armor the Core</h3>
+        <p class="card__body">
+          Business logic is the most valuable asset and must be protected from
+          external change. Dependencies point inwards only. The heart — entities and
+          use cases — never knows about frameworks, databases or external APIs.
+        </p>
+        <p class="pillar__rule">
+          The core must never know about frameworks, databases or external APIs.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <span class="pillar__letter">K</span>
+        <h3>Keep Infrastructure Silent</h3>
+        <p class="card__body">
+          Databases, mailers and brokers are secondary details. Persistence is treated
+          as an in-memory collection through the Repository pattern, and entities are
+          plain objects that know nothing about how they are stored.
+        </p>
+        <p class="pillar__rule">
+          Your entities are POPOs — completely ignorant of how they are saved or
+          transmitted.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <span class="pillar__letter">U</span>
+        <h3>Universal Language &amp; Contracts</h3>
+        <p class="card__body">
+          Ubiquitous Language bridges business and code, and Design-First Contracts
+          make it explicit. The OpenAPI document is the immutable technical promise
+          that allows systems to communicate.
+        </p>
+        <p class="pillar__rule">
+          If the code does not read like the business expert speaks, or if the
+          contract is bypassed, the system is broken.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="taxonomy">
+    <div class="wrap">
+      <p class="eyebrow">Repository taxonomy</p>
+      <h2>The three forms</h2>
+      <p class="lede">
+        Modularity is enforced at the source. Every repository must fit exactly one
+        of these archetypes — there is no fourth option and no hybrid.
+      </p>
+
+      <div class="prose mt-2">
+        <h3>1. Atomic repositories — the atom</h3>
+        <p>
+          The smallest possible unit of granularity. If a component can be broken down
+          further, it is not an atom. The structure is flat: a single level of
+          directory inside <code>src/</code>, fulfilling one specific contract.
+        </p>
+        <p class="text-muted">
+          Examples: <code>common-contract</code>, <code>http-value-object</code>,
+          <code>http-client</code>.
+        </p>
+
+        <h3>2. Assembly repositories — the assembly</h3>
+        <p>
+          Connection points. They contain no logic; they orchestrate the union of
+          atoms through <code>composer.json</code> dependencies, so that one install
+          brings ten atoms at once.
+        </p>
+        <p class="text-muted">
+          Examples: <code>common</code>, <code>http</code>,
+          <code>data-transfer-object</code>.
+        </p>
+
+        <h3>3. Application repositories — the core</h3>
+        <p>
+          The living system. Not a library, but the implementation of the business
+          heart, following Clean Architecture and DDD. It stays lean: anything generic
+          is pushed down into atoms.
+        </p>
+        <p class="text-muted">
+          Examples: <code>ensemble</code>, <code>koenma-id</code>,
+          <code>grogu-gateway</code>.
+        </p>
+      </div>
+
+      <div class="hero__actions">
+        <a class="button" href="/projects">Browse by shape</a>
+        <a class="button button--ghost" href="https://github.com/phprise-foundation/otaku-atomic" rel="noopener">Start from a template ↗</a>
+      </div>
+    </div>
+  </section>
+</Base>

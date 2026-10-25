@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Contribute"
+  description="How to contribute to PHPRise: prerequisites, the flow, the rules and the code of conduct."
+  path="/contribute"
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Contribute</p>
+      <h1>No permission required</h1>
+      <p class="lede">
+        Every repository accepts contributions under the same rules. Read them once and
+        they apply everywhere.
+      </p>
+
+      <div class="prose mt-2">
+        <h2>Before you start</h2>
+        <ul>
+          <li>PHP 8.4 or newer, with Composer.</li>
+          <li>An issue describing what you intend to change, or an existing one to claim.</li>
+          <li>Agreement with the <a href="/manifesto">manifesto</a> — it is a constraint, not a suggestion.</li>
+        </ul>
+
+        <h2>The flow</h2>
+        <ol>
+          <li>Fork the repository and create a branch from the default branch.</li>
+          <li>Write the failing test first, then the smallest change that makes it pass.</li>
+          <li>Run the test suite and the static analysis configured in the repository.</li>
+          <li>Open a pull request that explains the why, not only the what.</li>
+        </ol>
+
+        <h2>The rules that are not negotiable</h2>
+        <ul>
+          <li>One level of indentation per method.</li>
+          <li>No <code>else</code>.</li>
+          <li>Primitives wrapped in value objects.</li>
+          <li>Collections as first class objects.</li>
+          <li>One dot per line.</li>
+          <li>No abbreviations.</li>
+          <li>Small entities: 50 lines per class, 10 files per package.</li>
+          <li>At most two instance variables per class.</li>
+          <li>No getters, setters or public properties.</li>
+        </ul>
+
+        <h2>Where your change belongs</h2>
+        <p>
+          If you are adding generic behaviour, it belongs in an atom. If you are wiring
+          atoms together, it belongs in an assembly. Only business rules belong in an
+          application. A pull request that puts framework code inside a domain layer will
+          be rejected regardless of the tests.
+        </p>
+
+        <h2>Code of conduct</h2>
+        <p>
+          Be precise, be generous, attack the code and never the person. The full text is
+          in the
+          <a href="https://github.com/phprise-foundation/template/blob/main/CODE_OF_CONDUCT.md" rel="noopener">code of conduct</a>.
+        </p>
+      </div>
+
+      <div class="hero__actions">
+        <a class="button" href="https://github.com/phprise-foundation" rel="noopener">Find a repository ↗</a>
+        <a class="button button--ghost" href="/projects">Browse projects</a>
+      </div>
+    </div>
+  </section>
+</Base>

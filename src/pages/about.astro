@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="About"
+  description="Why PHPRise exists, what it refuses to do, and how it is maintained."
+  path="/about"
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <h1>Small parts, held to a standard</h1>
+
+      <div class="prose">
+        <p class="lede">
+          PHPRise is an open source foundation for PHP. The name joins PHP with rise:
+          the work of raising the floor of what a PHP codebase is allowed to look like.
+        </p>
+
+        <p>
+          It started from a frustration that is common in the PHP ecosystem: frameworks
+          that are excellent until you need to replace one piece, and then require you
+          to replace all of them. The alternative we build here is the opposite —
+          architecture made of parts small enough to be understood in one sitting and
+          replaced without permission.
+        </p>
+
+        <h2>What we refuse</h2>
+        <ul>
+          <li>Frameworks leaking into the domain layer.</li>
+          <li>Repositories that cannot be classified as atom, assembly or application.</li>
+          <li>Abstractions created before the second use case exists.</li>
+          <li>Code that needs a comment to explain its indentation.</li>
+          <li>Interfaces published without a contract.</li>
+        </ul>
+
+        <h2>How it is maintained</h2>
+        <p>
+          Everything lives in the
+          <a href="https://github.com/phprise-foundation" rel="noopener">phprise-foundation</a>
+          organization on GitHub, under the MIT license. Development happens in public:
+          issues describe intent, pull requests describe the change, and the
+          <a href="/manifesto">manifesto</a> settles disagreements.
+        </p>
+
+        <p>
+          There is no company behind the code and no paid tier. The project is funded by
+          the time of the people who use it.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          The fastest way to reach a maintainer is through an issue or discussion in the
+          relevant repository. For anything that does not belong to a single repository,
+          open one in the
+          <a href="https://github.com/phprise-foundation/template/issues" rel="noopener">template</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

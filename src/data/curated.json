@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "common-contract",
+    "package": "phprise/common-contract",
+    "title": "Common Contracts",
+    "summary": "The interfaces every commons package agrees on. Contracts only: no logic, no leaks.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "common-trait",
+    "package": "phprise/common-trait",
+    "title": "Common Traits",
+    "summary": "Small, composable traits shared by the commons. Behaviour you can attach, not inherit.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "common-cast",
+    "package": "phprise/common-cast",
+    "title": "Common Cast",
+    "summary": "Explicit type coercers. Conversion is a decision, never an accident.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "common-value-object",
+    "package": "phprise/common-value-object",
+    "title": "Common Value Objects",
+    "summary": "PHP primitives wrapped with intent: if it is a string, say which string.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "dto-contract",
+    "package": "phprise/dto-contract",
+    "title": "DTO Contracts",
+    "summary": "Interfaces for data transfer objects and typed collections.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "dto-trait",
+    "package": "phprise/dto-trait",
+    "title": "DTO Traits",
+    "summary": "Traits that give a DTO its collection behaviour without inheritance.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "http-contract",
+    "package": "phprise/http-contract",
+    "title": "HTTP Contracts",
+    "summary": "PSR-aligned HTTP contracts. The promise, written before the code.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "http-value-object",
+    "package": "phprise/http-value-object",
+    "title": "HTTP Value Objects",
+    "summary": "Methods, URIs, headers and status codes as immutable value objects.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "http-request",
+    "package": "phprise/http-request",
+    "title": "HTTP Request",
+    "summary": "A request is data. This is that data, immutable and typed.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "http-client",
+    "package": "phprise/http-client",
+    "title": "HTTP Client",
+    "summary": "A client that speaks contracts instead of leaking curl around your domain.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "http-connector",
+    "package": "phprise/http-connector",
+    "title": "HTTP Connector",
+    "summary": "Wires request, client and response into one replaceable part.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "common",
+    "package": "phprise/common",
+    "title": "Common",
+    "summary": "Meta-package: the entire commons in a single composer require.",
+    "taxonomy": "assembly",
+    "kind": "library",
+    "featured": false
+  },
+  {
+    "slug": "http",
+    "package": "phprise/http",
+    "title": "HTTP",
+    "summary": "Meta-package: contracts, value objects, request, client and connector, assembled.",
+    "taxonomy": "assembly",
+    "kind": "library",
+    "featured": true
+  },
+  {
+    "slug": "data-transfer-object",
+    "package": "phprise/data-transfer-object",
+    "title": "Data Transfer Object",
+    "summary": "DTOs and typed collections assembled from common atoms. The starting point for your own.",
+    "taxonomy": "assembly",
+    "kind": "library",
+    "featured": true
+  },
+  {
+    "slug": "ensemble",
+    "package": "phprise/ensemble",
+    "title": "Ensemble",
+    "summary": "Agents as a real development team. Self-hosted kanban board with roles, handoffs and history.",
+    "taxonomy": "application",
+    "kind": "app",
+    "featured": true
+  },
+  {
+    "slug": "koenma-id",
+    "package": "phprise/koenma-id",
+    "title": "Koenma ID",
+    "summary": "Identity and authentication for the ecosystem: users, credentials, tokens, tenants.",
+    "taxonomy": "application",
+    "kind": "app",
+    "featured": true
+  },
+  {
+    "slug": "grogu-gateway",
+    "package": "phprise/grogu-gateway",
+    "title": "Grogu Gateway",
+    "summary": "A generic gateway for Symfony and ApiPlatform applications. One door, many services.",
+    "taxonomy": "application",
+    "kind": "app",
+    "featured": false
+  },
+  {
+    "slug": "agent-watcher",
+    "package": "phprise/agent-watcher",
+    "title": "Agent Watcher",
+    "summary": "Watches your workspace and routes work to autonomous agents.",
+    "taxonomy": "application",
+    "kind": "app",
+    "featured": false
+  },
+  {
+    "slug": "sdk-stone-psp",
+    "package": "phprise/sdk-stone-psp",
+    "title": "Stone PSP SDK",
+    "summary": "Payment service provider integration, built on top of the HTTP assembly.",
+    "taxonomy": "assembly",
+    "kind": "sdk",
+    "featured": false
+  },
+  {
+    "slug": "stone-sdk",
+    "package": "phprise/stone-sdk",
+    "title": "Stone SDK",
+    "summary": "PHP SDK for Stone: typed, testable and free of hidden globals.",
+    "taxonomy": "assembly",
+    "kind": "sdk",
+    "featured": false
+  },
+  {
+    "slug": "otaku-atomic",
+    "package": "otaku/atomic",
+    "title": "Atomic Template",
+    "summary": "Start an Atomic repository: one responsibility, one level of directory, nothing more.",
+    "taxonomy": "template",
+    "kind": "template",
+    "featured": false
+  },
+  {
+    "slug": "otaku-assembly",
+    "package": "otaku/assembly",
+    "title": "Assembly Template",
+    "summary": "Start an Assembly repository: composition declared in composer.json, no logic inside.",
+    "taxonomy": "template",
+    "kind": "template",
+    "featured": false
+  },
+  {
+    "slug": "otaku-application",
+    "package": "otaku/application",
+    "title": "Application Template",
+    "summary": "Start an Application repository: Clean Architecture, DDD and the business heart protected.",
+    "taxonomy": "template",
+    "kind": "template",
+    "featured": false
+  },
+  {
+    "slug": "template",
+    "package": null,
+    "title": "Repository Template",
+    "summary": "The base skeleton every PHPRise repository starts from.",
+    "taxonomy": "template",
+    "kind": "template",
+    "featured": false
+  }
+]
