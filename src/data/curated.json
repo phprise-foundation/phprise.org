@@ -154,12 +154,15 @@
   },
   {
     "slug": "agent-watcher",
-    "package": "phprise/agent-watcher",
+    "package": null,
     "title": "Agent Watcher",
     "summary": "Watches your workspace and routes work to autonomous agents.",
     "taxonomy": "application",
     "kind": "app",
-    "featured": false
+    "featured": false,
+    "deprecated": true,
+    "replacedBy": "esdras-schonevald/open-warden",
+    "replacedByUrl": "https://github.com/esdras-schonevald/open-warden"
   },
   {
     "slug": "sdk-stone-psp",
@@ -179,7 +182,8 @@
     "kind": "sdk",
     "featured": false,
     "deprecated": true,
-    "replacedBy": "phprise/sdk-stone-psp"
+    "replacedBy": "phprise/sdk-stone-psp",
+    "replacedByUrl": "/projects/sdk-stone-psp"
   },
   {
     "slug": "otaku-atomic",

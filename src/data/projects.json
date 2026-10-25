@@ -1,5 +1,27 @@
 [
   {
+    "slug": "common-cast",
+    "package": "phprise/common-cast",
+    "title": "Common Cast",
+    "summary": "Explicit type coercers. Conversion is a decision, never an accident.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/common-cast",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-05-31T22:17:03Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
+  },
+  {
     "slug": "common-contract",
     "package": "phprise/common-contract",
     "title": "Common Contracts",
@@ -7,11 +29,19 @@
     "taxonomy": "atom",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/common-contract",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-06-01T19:50:10Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
   },
   {
     "slug": "common-trait",
@@ -21,25 +51,19 @@
     "taxonomy": "atom",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/common-trait",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-05-31T20:25:48Z",
-    "archived": false
-  },
-  {
-    "slug": "common-cast",
-    "package": "phprise/common-cast",
-    "title": "Common Cast",
-    "summary": "Explicit type coercers. Conversion is a decision, never an accident.",
-    "taxonomy": "atom",
-    "kind": "library",
-    "featured": false,
-    "url": "https://github.com/phprise-foundation/common-cast",
-    "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-05-31T22:17:03Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
   },
   {
     "slug": "common-value-object",
@@ -49,11 +73,19 @@
     "taxonomy": "atom",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/common-value-object",
     "stars": 0,
     "language": null,
     "pushedAt": "2026-01-06T23:28:43Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
   },
   {
     "slug": "dto-contract",
@@ -63,11 +95,19 @@
     "taxonomy": "atom",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/dto-contract",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-06-01T21:36:33Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
   },
   {
     "slug": "dto-trait",
@@ -77,53 +117,19 @@
     "taxonomy": "atom",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/dto-trait",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-06-01T21:46:29Z",
-    "archived": false
-  },
-  {
-    "slug": "http-contract",
-    "package": "phprise/http-contract",
-    "title": "HTTP Contracts",
-    "summary": "PSR-aligned HTTP contracts. The promise, written before the code.",
-    "taxonomy": "atom",
-    "kind": "library",
-    "featured": false,
-    "url": "https://github.com/phprise-foundation/http-contract",
-    "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-01-10T01:56:01Z",
-    "archived": false
-  },
-  {
-    "slug": "http-value-object",
-    "package": "phprise/http-value-object",
-    "title": "HTTP Value Objects",
-    "summary": "Methods, URIs, headers and status codes as immutable value objects.",
-    "taxonomy": "atom",
-    "kind": "library",
-    "featured": false,
-    "url": "https://github.com/phprise-foundation/http-value-object",
-    "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-01-22T16:22:29Z",
-    "archived": false
-  },
-  {
-    "slug": "http-request",
-    "package": "phprise/http-request",
-    "title": "HTTP Request",
-    "summary": "A request is data. This is that data, immutable and typed.",
-    "taxonomy": "atom",
-    "kind": "library",
-    "featured": false,
-    "url": "https://github.com/phprise-foundation/http-request",
-    "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-01-22T19:18:56Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
   },
   {
     "slug": "http-client",
@@ -133,11 +139,19 @@
     "taxonomy": "atom",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/http-client",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-01-22T19:42:07Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
   },
   {
     "slug": "http-connector",
@@ -147,11 +161,85 @@
     "taxonomy": "atom",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/http-connector",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-01-22T20:05:29Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
+  },
+  {
+    "slug": "http-contract",
+    "package": "phprise/http-contract",
+    "title": "HTTP Contracts",
+    "summary": "PSR-aligned HTTP contracts. The promise, written before the code.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/http-contract",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-01-10T01:56:01Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
+  },
+  {
+    "slug": "http-request",
+    "package": "phprise/http-request",
+    "title": "HTTP Request",
+    "summary": "A request is data. This is that data, immutable and typed.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/http-request",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-01-22T19:18:56Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
+  },
+  {
+    "slug": "http-value-object",
+    "package": "phprise/http-value-object",
+    "title": "HTTP Value Objects",
+    "summary": "Methods, URIs, headers and status codes as immutable value objects.",
+    "taxonomy": "atom",
+    "kind": "library",
+    "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/http-value-object",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-01-22T16:22:29Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-atom"
+    ]
   },
   {
     "slug": "common",
@@ -161,25 +249,19 @@
     "taxonomy": "assembly",
     "kind": "library",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/common",
     "stars": 0,
     "language": null,
     "pushedAt": "2026-01-09T03:36:20Z",
-    "archived": false
-  },
-  {
-    "slug": "http",
-    "package": "phprise/http",
-    "title": "HTTP",
-    "summary": "Meta-package: contracts, value objects, request, client and connector, assembled.",
-    "taxonomy": "assembly",
-    "kind": "library",
-    "featured": true,
-    "url": "https://github.com/phprise-foundation/http",
-    "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-01-23T15:29:28Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-assembly"
+    ]
   },
   {
     "slug": "data-transfer-object",
@@ -189,67 +271,41 @@
     "taxonomy": "assembly",
     "kind": "library",
     "featured": true,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/data-transfer-object",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-01-23T11:25:24Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-assembly"
+    ]
   },
   {
-    "slug": "ensemble",
-    "package": "phprise/ensemble",
-    "title": "Ensemble",
-    "summary": "Agents as a real development team. Self-hosted kanban board with roles, handoffs and history.",
-    "taxonomy": "application",
-    "kind": "app",
+    "slug": "http",
+    "package": "phprise/http",
+    "title": "HTTP",
+    "summary": "Meta-package: contracts, value objects, request, client and connector, assembled.",
+    "taxonomy": "assembly",
+    "kind": "library",
     "featured": true,
-    "url": "https://github.com/phprise-foundation/ensemble",
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/http",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-10-25T16:05:14Z",
-    "archived": false
-  },
-  {
-    "slug": "koenma-id",
-    "package": "phprise/koenma-id",
-    "title": "Koenma ID",
-    "summary": "Identity and authentication for the ecosystem: users, credentials, tokens, tenants.",
-    "taxonomy": "application",
-    "kind": "app",
-    "featured": true,
-    "url": "https://github.com/phprise-foundation/koenma-id",
-    "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-10-11T18:36:30Z",
-    "archived": false
-  },
-  {
-    "slug": "grogu-gateway",
-    "package": "phprise/grogu-gateway",
-    "title": "Grogu Gateway",
-    "summary": "A generic gateway for Symfony and ApiPlatform applications. One door, many services.",
-    "taxonomy": "application",
-    "kind": "app",
-    "featured": false,
-    "url": "https://github.com/phprise-foundation/grogu-gateway",
-    "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-09-11T15:11:16Z",
-    "archived": false
-  },
-  {
-    "slug": "agent-watcher",
-    "package": "phprise/agent-watcher",
-    "title": "Agent Watcher",
-    "summary": "Watches your workspace and routes work to autonomous agents.",
-    "taxonomy": "application",
-    "kind": "app",
-    "featured": false,
-    "url": "https://github.com/phprise-foundation/agent-watcher",
-    "stars": 0,
-    "language": "Python",
-    "pushedAt": "2026-10-17T20:54:05Z",
-    "archived": false
+    "pushedAt": "2026-01-23T15:29:28Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-assembly"
+    ]
   },
   {
     "slug": "sdk-stone-psp",
@@ -259,11 +315,19 @@
     "taxonomy": "assembly",
     "kind": "sdk",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/sdk-stone-psp",
     "stars": 0,
     "language": null,
     "pushedAt": "2026-05-20T10:27:33Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-assembly"
+    ]
   },
   {
     "slug": "stone-sdk",
@@ -275,39 +339,105 @@
     "featured": false,
     "deprecated": true,
     "replacedBy": "phprise/sdk-stone-psp",
+    "replacedByUrl": "/projects/sdk-stone-psp",
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/stone-sdk",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-10-25T16:22:47Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-assembly"
+    ]
   },
   {
-    "slug": "otaku-atomic",
-    "package": "otaku/atomic",
-    "title": "Atomic Template",
-    "summary": "Start an Atomic repository: one responsibility, one level of directory, nothing more.",
-    "taxonomy": "template",
-    "kind": "template",
+    "slug": "agent-watcher",
+    "package": null,
+    "title": "Agent Watcher",
+    "summary": "Watches your workspace and routes work to autonomous agents.",
+    "taxonomy": "application",
+    "kind": "app",
     "featured": false,
-    "url": "https://github.com/phprise-foundation/otaku-atomic",
+    "deprecated": true,
+    "replacedBy": "esdras-schonevald/open-warden",
+    "replacedByUrl": "https://github.com/esdras-schonevald/open-warden",
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/agent-watcher",
     "stars": 0,
-    "language": "PHP",
-    "pushedAt": "2026-10-11T23:25:26Z",
-    "archived": false
+    "language": "Python",
+    "pushedAt": "2026-10-25T16:36:59Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-application"
+    ]
   },
   {
-    "slug": "otaku-assembly",
-    "package": "otaku/assembly",
-    "title": "Assembly Template",
-    "summary": "Start an Assembly repository: composition declared in composer.json, no logic inside.",
-    "taxonomy": "template",
-    "kind": "template",
-    "featured": false,
-    "url": "https://github.com/phprise-foundation/otaku-assembly",
+    "slug": "ensemble",
+    "package": "phprise/ensemble",
+    "title": "Ensemble",
+    "summary": "Agents as a real development team. Self-hosted kanban board with roles, handoffs and history.",
+    "taxonomy": "application",
+    "kind": "app",
+    "featured": true,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/ensemble",
     "stars": 0,
     "language": "PHP",
-    "pushedAt": "2026-10-11T23:25:30Z",
-    "archived": false
+    "pushedAt": "2026-10-25T16:05:14Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-application"
+    ]
+  },
+  {
+    "slug": "grogu-gateway",
+    "package": "phprise/grogu-gateway",
+    "title": "Grogu Gateway",
+    "summary": "A generic gateway for Symfony and ApiPlatform applications. One door, many services.",
+    "taxonomy": "application",
+    "kind": "app",
+    "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/grogu-gateway",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-09-11T15:11:16Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-application"
+    ]
+  },
+  {
+    "slug": "koenma-id",
+    "package": "phprise/koenma-id",
+    "title": "Koenma ID",
+    "summary": "Identity and authentication for the ecosystem: users, credentials, tokens, tenants.",
+    "taxonomy": "application",
+    "kind": "app",
+    "featured": true,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/koenma-id",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-10-11T18:36:30Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-application"
+    ]
   },
   {
     "slug": "otaku-application",
@@ -317,11 +447,63 @@
     "taxonomy": "template",
     "kind": "template",
     "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
     "url": "https://github.com/phprise-foundation/otaku-application",
     "stars": 0,
     "language": "PHP",
     "pushedAt": "2026-10-11T23:25:22Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-template"
+    ]
+  },
+  {
+    "slug": "otaku-assembly",
+    "package": "otaku/assembly",
+    "title": "Assembly Template",
+    "summary": "Start an Assembly repository: composition declared in composer.json, no logic inside.",
+    "taxonomy": "template",
+    "kind": "template",
+    "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/otaku-assembly",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-10-11T23:25:30Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-template"
+    ]
+  },
+  {
+    "slug": "otaku-atomic",
+    "package": "otaku/atomic",
+    "title": "Atomic Template",
+    "summary": "Start an Atomic repository: one responsibility, one level of directory, nothing more.",
+    "taxonomy": "template",
+    "kind": "template",
+    "featured": false,
+    "deprecated": false,
+    "replacedBy": null,
+    "replacedByUrl": null,
+    "deprecationNote": null,
+    "url": "https://github.com/phprise-foundation/otaku-atomic",
+    "stars": 0,
+    "language": "PHP",
+    "pushedAt": "2026-10-11T23:25:26Z",
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-template"
+    ]
   },
   {
     "slug": "template",
@@ -333,11 +515,16 @@
     "featured": false,
     "deprecated": true,
     "replacedBy": null,
+    "replacedByUrl": null,
     "deprecationNote": "Superseded by the three OTAKU templates: otaku-atomic, otaku-assembly and otaku-application.",
     "url": "https://github.com/phprise-foundation/template",
     "stars": 0,
     "language": null,
     "pushedAt": "2026-10-25T16:21:43Z",
-    "archived": false
+    "archived": false,
+    "topics": [
+      "php",
+      "phprise-template"
+    ]
   }
 ]

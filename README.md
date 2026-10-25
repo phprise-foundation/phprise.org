@@ -30,35 +30,60 @@ src/
 │   ├── contribute.astro
 │   └── 404.astro
 ├── data/
-│   ├── curated.json          hand-written copy + taxonomy (source of truth)
-│   └── projects.json         curated + GitHub metadata (generated, committed)
+│   ├── curated.json          editorial overlay (copy, featured, replacements)
+│   └── projects.json         generated from the GitHub org, committed
 └── styles/main.css           tokens + layout, no framework
 ```
 
+### The catalog is GitHub, not a list
+
+The build reads the public repositories of `phprise-foundation`. A new repository
+appears on the next build; nothing here needs editing.
+
+Each repository declares itself through **topics**:
+
+| Topic | Meaning |
+|---|---|
+| `phprise-atom` | atomic repository |
+| `phprise-assembly` | assembly repository |
+| `phprise-application` | application repository |
+| `phprise-template` | template repository |
+| `deprecated` / `abandoned` | show the deprecation badge |
+| `phprise-ignore` | keep out of the catalog |
+
+`curated.json` is an **overlay only**: it improves copy, marks `featured`, and
+carries the replacement link (`replacedBy`, `replacedByUrl`) — things GitHub cannot
+express. An overlay entry that matches no repository only produces a warning; it
+never hides a repository.
+
 ### Deprecating a project
 
-`curated.json` accepts two optional fields:
+The canonical declaration lives in the repository (`"abandoned"` in `composer.json`,
+README banner, `deprecated` topic). The site mirrors it:
 
 ```json
-{ "deprecated": true, "replacedBy": "phprise/sdk-stone-psp" }
-{ "deprecated": true, "replacedBy": null, "deprecationNote": "Superseded by ..." }
+{ "slug": "stone-sdk", "deprecated": true, "replacedBy": "phprise/sdk-stone-psp", "replacedByUrl": "/projects/sdk-stone-psp" }
 ```
 
 The card gets a `Deprecated` badge, the install snippet is hidden, and the detail
-page shows a notice pointing at the replacement. The canonical declaration lives in
-each repository's `composer.json` (`"abandoned"`), not here — the site only mirrors it.
+page shows a notice pointing at the replacement (internal route or absolute URL).
 
 ## Commands
 
 | Command | What it does |
 |---|---|
-| `npm run dev` | local dev server |
-| `npm run build` | static build into `dist/` |
-| `npm run sync` | refresh stars/dates from the GitHub org (needs `GH_TOKEN`) |
+| `npm run dev` | local dev server (uses the last generated catalog) |
+| `npm run build` | sync the catalog from GitHub, then build into `dist/` |
+| `npm run sync` | refresh the catalog only (stars, descriptions, new repositories) |
 | `npm run deploy` | build and `wrangler deploy` |
 
-The build is hermetic: it never calls the network. `npm run sync` is the only
-command that talks to GitHub, and it writes `src/data/projects.json` for review.
+The build is **not** hermetic by design: it reads the public repositories of the
+organization. `GH_TOKEN` is optional (public data, 60 requests/hour unauthenticated;
+set it in CI for headroom). If GitHub is unreachable the script keeps the last
+committed `src/data/projects.json` and the build continues.
+
+`npm run dev` does not fetch anything — run `npm run sync` when you want the catalog
+refreshed locally.
 
 ## Deploy
 

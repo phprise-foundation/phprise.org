@@ -13,13 +13,13 @@ interface Props {
     stars: number | null;
     deprecated?: boolean;
     replacedBy?: string | null;
+    replacedByUrl?: string | null;
   };
 }
 
 const { project } = Astro.props;
-const replacement = project.replacedBy
-  ? `/projects/${project.replacedBy.split('/').pop()}`
-  : null;
+const replacement = project.replacedByUrl
+  ?? (project.replacedBy ? `/projects/${project.replacedBy.split('/').pop()}` : null);
 ---
 
 <article
