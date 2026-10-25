@@ -1,0 +1,10 @@
+# Hashed build assets never change: cache them forever.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Everything else revalidates through the ETag, as Cloudflare intends.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

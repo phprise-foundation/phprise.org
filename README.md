@@ -54,4 +54,13 @@ npm run deploy
 ```
 
 `wrangler.jsonc` serves `./dist` with `not_found_handling: "404-page"` and binds the
-custom domain `phprise.org`.
+custom domains `phprise.org` and `www.phprise.org`.
+
+Zone-level configuration (applied via API, not stored here):
+
+- **Always Use HTTPS**: on.
+- **Single Redirect**: `www.phprise.org/*` → `301 https://phprise.org/*`, query
+  preserved.
+- **`public/_headers`**: `/_astro/*` immutable for one year; security headers on
+  everything.
+
